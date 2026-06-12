@@ -1,0 +1,28 @@
+[project]
+name = "nlp"
+version = "0.1.0"
+requires-python = ">=3.12"
+dependencies = [
+    "torch",
+    "torchvision",
+    "torchaudio",
+    "ipykernel>=7.2.0",
+    "jieba>=0.42.1",
+    "fasttext-wheel>=0.9.2",
+    "seaborn>=0.13.2",
+    "wordcloud>=1.9.6",
+    "requests>=2.33.1",
+    "gensim>=4.4.0",
+]
+
+
+[[tool.uv.index]]
+name = "pytorch-gpu"
+url = "https://download.pytorch.org/whl/cu130"
+explicit = true  # 关键：这确保只有明确指定该索引的包才去这里找
+
+# 3. 强制指定这三个包去 pytorch-gpu 索引找（这步最关键）
+[tool.uv.sources]
+torch = { index = "pytorch-gpu" }
+torchvision = { index = "pytorch-gpu" }
+torchaudio = { index = "pytorch-gpu" }
