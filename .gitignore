@@ -4,6 +4,8 @@
 
 data/
 model/
+models/
+logs/
 .env
 
 
