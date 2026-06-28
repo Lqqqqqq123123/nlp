@@ -5,7 +5,7 @@ ROOT_DIR = Path(__file__).parents[1]
 
 # DATA_DIR
 DATA_DIR = ROOT_DIR / 'data'
-RAW_DATA_DIR = DATA_DIR / 'row'
+RAW_DATA_DIR = DATA_DIR / 'raw'
 PROCESS_DATA_DIR = DATA_DIR / 'process'
 
 # LOG_DIR
